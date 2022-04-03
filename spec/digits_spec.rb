@@ -74,11 +74,11 @@ RSpec.describe("#add") do
     it "correctly add digits by transforming the input to an integer" do
       test_cases = [
         {
-          input: BigDecimal(7, 10),
+          input: BigDecimal(7.561, 10),
           expected_output: 7,
         },
         {
-          input: BigDecimal(16, 10),
+          input: BigDecimal("16.0", 10),
           expected_output: 7,
         },
         {
@@ -86,11 +86,11 @@ RSpec.describe("#add") do
           expected_output: 6,
         },
         {
-          input: BigDecimal(132189, 10),
+          input: BigDecimal(132189.543, 10),
           expected_output: 6,
         },
         {
-          input: BigDecimal(493193, 10),
+          input: BigDecimal("493193.1234567", 10),
           expected_output: 2,
         }
       ]
@@ -117,11 +117,11 @@ RSpec.describe("#add") do
           expected_output: 6,
         },
         {
-          input: "132189",
+          input: "132189.12",
           expected_output: 6,
         },
         {
-          input: "493193",
+          input: "493193.009",
           expected_output: 2,
         }
       ]
