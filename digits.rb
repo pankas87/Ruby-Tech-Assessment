@@ -7,13 +7,11 @@ module Digits
   # 132189 --> 1 + 3 + 2 + 1 + 8 + 9 = 24 --> 2 + 4 = 6
   # 493193 --> 4 + 9 + 3 + 1 + 9 + 3 = 29 --> 2 + 9 = 11 --> 1 + 1 = 2
   def Digits.add(input)
-    sum = 0
-
     input = Float(input) if input.class == String
     input = input.to_i if input.class != Fixnum
     input = input * -1 if input < 0
-    sum = input
 
+    sum = input
     while sum >= 10
       temp_sum = 0
       temp_input = sum
