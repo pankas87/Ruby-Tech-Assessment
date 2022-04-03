@@ -1,7 +1,7 @@
 # digits_spec.rb
 require '../digits'
 
-RSpec.describe("#adding_digits") do
+RSpec.describe("#add") do
   # TODO: Add the test cases from the assignment instructions
   context "integers" do
     it "correctly adds digits" do
@@ -12,7 +12,7 @@ RSpec.describe("#adding_digits") do
         },
         {
           input: -12345,
-          expected_output: -15,
+          expected_output: 15,
         },
       ]
 
@@ -33,6 +33,17 @@ RSpec.describe("#adding_digits") do
     end
   end
 
+  context "BigDecimal" do
+    it "correctly add digits by transforming the input to an integer" do
+      test_cases = [
+        {
+          input: BigDecimal("12345.5"),
+          expected_output: 15,
+        },
+      ]
+    end
+  end
+
   context "strings" do
     it "correctly add digits by transforming the input to an integer" do
       test_cases = [
@@ -41,6 +52,10 @@ RSpec.describe("#adding_digits") do
           expected_output: 15,
         },
       ]
+    end
+
+    it "throws an error for non-numerical strings" do
+
     end
   end
 end
