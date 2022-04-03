@@ -40,7 +40,7 @@ RSpec.describe("#add") do
   end
 
   context "floating point" do
-    it "correctly add digits by transforming the input to an integer" do
+    it "correctly adds digits by transforming the input to an integer" do
       test_cases = [
         {
           input: 7.0,
@@ -71,7 +71,7 @@ RSpec.describe("#add") do
   end
 
   context "BigDecimal" do
-    it "correctly add digits by transforming the input to an integer" do
+    it "correctly adds digits by transforming the input to an integer" do
       test_cases = [
         {
           input: BigDecimal(7.561, 10),
